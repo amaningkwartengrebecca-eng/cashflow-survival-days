@@ -1,7 +1,7 @@
 # 🐙 Cashflow Survival Days – "Duolingo for SME Cashflow"
 
 **Live Demo:** [https://amaningkwartengrebecca-eng.github.io/cashflow-survival-days/](https://amaningkwartengrebecca-eng.github.io/cashflow-survival-days/)  
-*(Replace `your-username` with your actual GitHub username)*
+
 
 A gamified, interactive cashflow management tool built for UK SMEs. Tested with real founders and designed to turn cashflow from a spreadsheet nightmare into a daily habit.
 
