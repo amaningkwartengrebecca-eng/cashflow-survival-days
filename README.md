@@ -29,6 +29,32 @@ The education section (The quizzes tab on the MVP) will always be free. I don't 
 - **No Backend – Works Offline** – All data stored in your browser's localStorage (MVP)
 
 ---
+### Google Sheets Setup (For Import)
+
+Want to import your own invoices? Here's how:
+
+1. **Create a Google Sheet** with these column headers (exactly as written, case-sensitive):
+
+| Column | What it means |
+| :--- | :--- |
+| `Customer` | The client or customer name |
+| `Invoice Date` | Date invoice was issued (format: DD/MM/YYYY) |
+| `Due Date` | Date payment is due (format: DD/MM/YYYY) |
+| `Amount` | Invoice amount (£) |
+| `Paid` | Yes/No – has this been paid? |
+| `Overdue` | Yes/No – is this overdue? |
+
+2. **Publish the sheet to the web:**
+   - File → Share → Publish to web
+   - Copy the link (the one that ends with `?gid=0&single=true&output=csv`)
+
+3. **Paste the link** into the Cashflow Survival Days import field and click "Load"
+
+That's it. Your invoices will appear in the dashboard, and used for the survival days calculator.
+
+> ⚠️ **Important:** Make sure your column headers match exactly and are Lower-Case. The import tool looks for these specific names. If you need a template, here's a template can copy (just click the link): [https://docs.google.com/spreadsheets/d/1-EzsW1401O3YoyWnbz-RZSnITB-UdkKTq8Eby9Xiens/copy]
+
+---
 
 ### 🛠️ Tech Stack
 
