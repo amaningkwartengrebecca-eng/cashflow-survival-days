@@ -1,5 +1,5 @@
 
-### 🐙 Cashflow Survival Days – "Duolingo for SME Cashflow"
+### 🐙 Rhophilia – The "Duolingo" for Cashflow
 
 **Live Demo:** https://amaningkwartengrebecca-eng.github.io/cashflow-survival-days/
 
