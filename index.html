@@ -1,5 +1,5 @@
 <!--
-  Cashflow Survival Days – Complete MVP (as a single‑file)
+  Rhophalia – Complete MVP (as a single‑file)
   ==================================================
   Includes all features: DD cancellation, tick/cross, copy protection,
   forecast chart, quizzes, waitlist, onboarding, Clear All Data.
@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🐙 Rhophalia · Cash is King</title>
+    <title>🐙 Rhophalia· Cash is King</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -183,7 +183,7 @@
 <!-- 🚀 Beta Banner -->
     <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center py-2 px-4 text-sm font-bold shadow-lg">
         🚀 Beta v2.0 launching 2027 — 
-       <a id="bannerWaitlistLink" href="#" class="underline hover:text-yellow-200">Join the waitlist</a>
+        <a id="bannerWaitlistLink" href="#" class="underline hover:text-yellow-200">Join the waitlist</a>
         (or play with the MVP below!)
     </div>
 
@@ -381,7 +381,7 @@
                     </div>
                 </details>
             </div>
-            <p class="text-xs text-gray-500 dark:text-gray-400 w-full text-center mt-2">© 2026 Rhophalia — MVP · Cash is King</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400 w-full text-center mt-2">© 2026  Rhophalia - MVP · Cash is King</p>
         </div>
         <iframe id="googleFormFrame" name="googleFormFrame" style="display:none;"></iframe>
     </footer>
@@ -409,7 +409,7 @@
             <div id="waitlistSuccess" class="hidden text-center py-4">
                 <span class="text-4xl block mb-2">✅</span>
                 <p class="font-bold text-gray-800 dark:text-white">You're on the list!</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">We'll notify you when the Beta launches.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">We'll notify you when V1 launches.</p>
             </div>
         </div>
     </div>
@@ -999,6 +999,13 @@
             }
 
             $openWaitlistBtn.addEventListener('click', openWaitlistModal);
+                            const bannerLink = document.getElementById('bannerWaitlistLink');
+                if (bannerLink) {
+                bannerLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openWaitlistModal();
+                });
+    }
             $closeWaitlistBtn.addEventListener('click', closeWaitlistModal);
             $waitlistModal.addEventListener('click', (e) => { if (e.target === $waitlistModal) closeWaitlistModal(); });
             $waitlistForm.addEventListener('submit', function(e) {
@@ -1016,17 +1023,7 @@
                 $waitlistForm.classList.add('hidden'); $waitlistSuccess.classList.remove('hidden');
                 setTimeout(closeWaitlistModal, 3000);
             });
-              // Existing footer button listener
-              $openWaitlistBtn.addEventListener('click', openWaitlistModal);
-              
-              // Add this right below it:
-              const bannerLink = document.getElementById('bannerWaitlistLink');
-              if (bannerLink) {
-                bannerLink.addEventListener('click', (e) => {
-                  e.preventDefault();
-                  openWaitlistModal();
-                });
-              }
+
             $resetHeartsBtn.addEventListener('click', () => { appData.hearts = MAX_HEARTS; appData.lastHeartRegen = Date.now(); saveData(); renderQuizzes(); renderStats(); });
             $resetQuizzesBtn.addEventListener('click', () => {
                 if (!confirm('Reset all quiz answers? This cannot be undone.')) return;
