@@ -183,7 +183,7 @@
 <!-- 🚀 Beta Banner -->
     <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center py-2 px-4 text-sm font-bold shadow-lg">
         🚀 Beta v2.0 launching 2027 — 
-        <a href="#" onclick="openWaitlistModal(); return false;" class="underline hover:text-yellow-200">Join the waitlist</a>
+       <a id="bannerWaitlistLink" href="#" class="underline hover:text-yellow-200">Join the waitlist</a>
         (or play with the MVP below!)
     </div>
 
@@ -888,7 +888,6 @@
 
             // ── WAITLIST MODAL ─────────────────────
             function openWaitlistModal() { $waitlistModal.classList.remove('hidden');
-            window.openWaitlistModal = openWaitlistModal; 
             $waitlistForm.classList.remove('hidden'); $waitlistSuccess.classList.add('hidden'); $waitlistForm.reset(); }
             function closeWaitlistModal() { $waitlistModal.classList.add('hidden'); }
 
